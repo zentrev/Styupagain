@@ -15,16 +15,15 @@ public class BulletProjectile : ProjectileBase
 
     public override void Destruct()
     {
-        if (photonView.IsMine)
+        List<Health> hpObjs = Physics.OverlapSphere(transform.position, 1.0f).Where(h => h.GetComponent<Health>()).Select(h => h.GetComponent<Health>()).ToList();
+        foreach (Health c in hpObjs)
         {
-            List<Health> hpObjs = Physics.OverlapSphere(transform.position, 1.0f).Where(h => h.GetComponent<Health>()).Select(h => h.GetComponent<Health>()).ToList();
-            foreach (Health c in hpObjs)
+            if (c.tag == "Player")
             {
                 c.DealDamage(Damage); //* modifier
+                Instantiate(BloodHitPrefab, transform.position, transform.rotation, null);
             }
-            Instantiate(BloodHitPrefab, transform.position, transform.rotation, null);
-            //Destroy(gameObject);
-
         }
+        Destroy(gameObject);
     }
 }
