@@ -33,7 +33,6 @@ public class GameManager : Singleton<GameManager>
                 foreach (FirstPersonPlayer player in players)
                 {
                     player.FreezePlayer(true);
-                    player.Fire();
                 }
 
             }

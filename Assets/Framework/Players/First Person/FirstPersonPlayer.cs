@@ -35,7 +35,6 @@ namespace StayupolKnights
 
 		[Header("Componets")]
 		[SerializeField] SkinnedMeshRenderer m_characterModel = null;
-		[SerializeField] WeaponBase m_weapon = null;
 
 		#region Input Variables
 		Vector3 moveInput;
@@ -69,7 +68,7 @@ namespace StayupolKnights
 		
 			input.Default.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>().ConvertXYVectorToXZVector();
 			input.Default.Look.performed += ctx => lookInput = ctx.ReadValue<Vector2>();
-			input.Default.Jump.performed += ctx => { if (photonView.IsMine && inControl) Jump(); };
+			input.Default.Jump.performed += ctx => Jump();
 		}
 
 		void Update()
@@ -191,22 +190,10 @@ namespace StayupolKnights
 			playerCamera.eulerAngles = clampedRotation;
 		}
 
-
 		public void FreezePlayer(bool freeze)
-		{
-			photonView.RPC("PunFreezePlayer", RpcTarget.All, freeze);
-		}
-
-		[PunRPC]
-		private void PunFreezePlayer(bool freeze)
 		{
 			rb.isKinematic = freeze;
 			inControl = !freeze;
-		}
-
-		public void Fire()
-		{
-			m_weapon.FireWeapon();
 		}
 
 		#region Network
@@ -217,7 +204,6 @@ namespace StayupolKnights
 			{
 				spawn.position = agent.transform.position;
 				spawn.rotation = agent.transform.rotation;
-				GameManager.Instance.players.Remove(agent);
 				PhotonNetwork.Destroy(agent.gameObject);
 			}
 
