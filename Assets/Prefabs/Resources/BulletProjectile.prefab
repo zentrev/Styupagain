@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6531928273314638384}
   - component: {fileID: 8478835895515016476}
   - component: {fileID: 4054731841695062388}
+  - component: {fileID: 1173718555}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4807023109642231140}
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000000016287444, y: 0.00000009286828, z: -0.1033372}
+  m_LocalPosition: {x: 3.001, y: 0.00000009286828, z: -0.438}
   m_LocalScale: {x: 100, y: 100, z: 179.01443}
   m_Children: []
   m_Father: {fileID: 4997409360216670067}
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &1173718555
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4807023109642231140}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.00016698899
+  m_Height: 0.0002544361
+  m_Direction: 1
+  m_Center: {x: 2.910383e-11, y: -2.1827873e-11, z: 0.000014591264}
 --- !u!1 &7186874942894978590
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileType: 1
   owner: {fileID: 0}
-  modifier: {fileID: 0}
+  modifier: {fileID: 1570254554574421992}
   rb: {fileID: 1620474552576189265}
   Damage: 50
   BloodHitPrefab: {fileID: 1083484083751507187, guid: d3e7245c5473ed94a8d912bcc74a44ed,
@@ -165,10 +180,10 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 0
+  Synchronization: 1
   OwnershipTransfer: 0
   ObservedComponents:
-  - {fileID: 0}
+  - {fileID: 1693015189718463453}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
