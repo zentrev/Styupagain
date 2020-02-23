@@ -75,6 +75,7 @@ namespace StayupolKnights
 		private void Start()
 		{
 			GetComponent<WeaponManager>().SetUpSelections();
+			m_weapon = GetComponentInChildren<WeaponBase>();
 		}
 
 		void Update()

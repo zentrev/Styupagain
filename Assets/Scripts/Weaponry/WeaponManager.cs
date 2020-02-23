@@ -19,7 +19,7 @@ public class WeaponManager : MonoBehaviour
 
     public Transform weaponSpawnPosition;
 
-    public void SetUpSelections()
+       public void SetUpSelections()
     {
          Instantiate(WeaponBase, weaponSpawnPosition).GetComponent<WeaponBase>().weaponType = weaponSelected;
 
