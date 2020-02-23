@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6609140648013695888}
   - component: {fileID: 1661521258477446641}
+  - component: {fileID: 1861382953992325544}
   - component: {fileID: 1620474552576189265}
   - component: {fileID: 2183574495017340282}
   - component: {fileID: 1693015189718463453}
@@ -47,10 +48,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cc910fcde6295044b8e88ff05864ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileType: 0
+  projectileType: 1
   rb: {fileID: 1620474552576189265}
   Damage: 50
-  BloodHitPrefab: {fileID: 0}
+  BloodHitPrefab: {fileID: 1083484083751507187, guid: d3e7245c5473ed94a8d912bcc74a44ed,
+    type: 3}
+--- !u!114 &1861382953992325544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7186874942894978590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c525db8dbb2e644826f6c73919ad95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_projectile: {fileID: 1661521258477446641}
+  m_damageModifier: 1
+  bounceCount: 2
+  minVelocity: {x: 0, y: 0, z: 0}
 --- !u!54 &1620474552576189265
 Rigidbody:
   m_ObjectHideFlags: 0

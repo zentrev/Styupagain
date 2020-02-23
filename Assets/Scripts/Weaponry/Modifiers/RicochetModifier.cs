@@ -25,6 +25,7 @@ public class RicochetModifier : ModifierBase
         {
             bounceCount--;
             Ricochet(collision.contacts[0].normal);
+            Debug.Log("bounce");
         }
         m_projectile.Destruct();
 

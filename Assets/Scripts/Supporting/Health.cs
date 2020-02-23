@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
-public class Health : MonoBehaviour
+public class Health : MonoBehaviourPun
 {
     [SerializeField] Slider healthbar = null;
     public float healthMax = 1.0f;
@@ -30,6 +31,14 @@ public class Health : MonoBehaviour
     {
         healthCount -= dmg;
         if (an) an.SetTrigger("Damage");
+        photonView.RPC("PunSetHealth", RpcTarget.All, healthCount);
+    }
+
+    [PunRPC]
+    private void PunSetHealth(float health)
+    {
+        healthCount = health;
+        Debug.Log(health);
     }
 
     public void FixedUpdate()

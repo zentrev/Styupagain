@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class WeaponBase : MonoBehaviour
 {
@@ -20,8 +21,7 @@ public class WeaponBase : MonoBehaviour
 
     public void FireWeapon()
     {
-        ProjectileBase projectileInstance = Instantiate(projectile, muzzle.transform, true);
-
+        ProjectileBase projectileInstance = PhotonNetwork.Instantiate(projectile.name, muzzle.transform.position, muzzle.transform.rotation).GetComponent<ProjectileBase>();
         switch (weaponType)
         {
             case EWeapon.SHOOT:

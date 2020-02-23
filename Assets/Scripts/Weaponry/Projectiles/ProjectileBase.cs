@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
-public abstract class ProjectileBase : MonoBehaviour
+using Photon.Pun;
+public abstract class ProjectileBase : MonoBehaviourPun
 {
     public enum EProjectileType
     {
