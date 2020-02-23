@@ -17,11 +17,12 @@ public class WeaponManager : MonoBehaviour
     public WeaponBase.EWeapon weaponSelected;
     public ModifierBase.EModifier modifierSelected;
 
-    Transform weaponSpawnPosition;
+    public Transform weaponSpawnPosition;
 
     public void SetUpSelections()
     {
-        Instantiate(WeaponBase, weaponSpawnPosition).GetComponent<WeaponBase>().weaponType = weaponSelected;
+         Instantiate(WeaponBase, weaponSpawnPosition).GetComponent<WeaponBase>().weaponType = weaponSelected;
+
         ProjectileBase b = null;
         switch (projectileSelected)
         {
@@ -54,9 +55,5 @@ public class WeaponManager : MonoBehaviour
                 b.gameObject.AddComponent<PierceModifier>().m_projectile = b;
                 break;
         }
-
-        //Get Selections (from manager?)
-        //Instantiate game objects
-        //Link them together
     }
 }

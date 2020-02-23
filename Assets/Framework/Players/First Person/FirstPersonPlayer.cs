@@ -72,6 +72,11 @@ namespace StayupolKnights
 			input.Default.Jump.performed += ctx => { if (photonView.IsMine && inControl) Jump(); };
 		}
 
+		private void Start()
+		{
+			GetComponent<WeaponManager>().SetUpSelections();
+		}
+
 		void Update()
 		{
 			if (photonView.IsMine && inControl)
