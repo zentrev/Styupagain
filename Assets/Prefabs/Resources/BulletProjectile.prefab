@@ -129,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileType: 1
   owner: {fileID: 0}
+  modifier: {fileID: 0}
   rb: {fileID: 1620474552576189265}
   Damage: 50
   BloodHitPrefab: {fileID: 1083484083751507187, guid: d3e7245c5473ed94a8d912bcc74a44ed,
@@ -200,6 +201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_projectile: {fileID: 1661521258477446641}
   m_damageModifier: 0
+  weapon: {fileID: 0}
   bounceCount: 2
   minVelocity: {x: 0, y: 0, z: 0}
 --- !u!1 &8286909793503530336
