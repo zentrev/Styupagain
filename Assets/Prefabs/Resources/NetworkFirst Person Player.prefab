@@ -53,16 +53,12 @@ MonoBehaviour:
     type: 3}
   BulletProjectile: {fileID: 7186874942894978590, guid: 7c3e81c6ee0d79b478e09d7c027b01f7,
     type: 3}
-  MolotovProjectile: {fileID: 7135018716716772951, guid: 434e94a9d3a98ed468977285aca6418d,
+  MolotovProjectile: {fileID: 8889884977925579343, guid: dcfa9c716d5c0504f85bffab31a39687,
     type: 3}
   GrenadeProjectile: {fileID: 817886744657053665, guid: 2b216ef028aa3e3408cde7be4919de53,
     type: 3}
   MissileProjectile: {fileID: 1228228760078846276, guid: 315a609f83a62bc49977bd6f421aaa86,
     type: 3}
-  RicochetModifier: {fileID: 0}
-  ThreeWayModifier: {fileID: 0}
-  ClusterModifier: {fileID: 0}
-  PierceModifier: {fileID: 0}
   projectileSelected: 0
   weaponSelected: 0
   modifierSelected: 0
