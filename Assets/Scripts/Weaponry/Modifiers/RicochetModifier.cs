@@ -8,10 +8,13 @@ public class RicochetModifier : ModifierBase
     private Vector3 lastFrameVelocity;
     [SerializeField] Vector3 minVelocity;
     private Rigidbody rb;
+    private WeaponBase weapon;
 
     private void OnEnable()
     {
         m_projectile.TryGetComponent(out rb);
+        m_projectile.TryGetComponent(out weapon);
+
     }
 
     private void Update()
@@ -26,7 +29,17 @@ public class RicochetModifier : ModifierBase
             bounceCount--;
             Ricochet(collision.contacts[0].normal);
         }
-        m_projectile.Destruct();
+        if (weapon.weaponType == WeaponBase.EWeapon.ROLL)
+        {
+            if (rb.velocity.magnitude == 0.02f)
+            {
+                m_projectile.Destruct();
+            }
+        }
+        else
+        {
+            m_projectile.Destruct();
+        }
 
     }
 
