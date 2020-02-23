@@ -7,16 +7,28 @@ public class ThreeWayModifier : ModifierBase
     [SerializeField] float m_distanceApart = 3;
     private Rigidbody rb;
     private bool spawn = true;
+    private WeaponBase weapon;
     public bool horizontalShot = true;
 
     protected override void OnCollisionEnter(Collision collision)
     {
-        m_projectile.Destruct();
+        if (weapon.weaponType == WeaponBase.EWeapon.ROLL)
+        {
+            if (rb.velocity.magnitude == 0.02f)
+            {
+                m_projectile.Destruct();
+            }
+        }
+        else
+        {
+            m_projectile.Destruct();
+        }
     }
 
     private void OnEnable()
     {
         m_projectile.TryGetComponent(out rb);
+        m_projectile.TryGetComponent(out weapon);
     }
 
     private void Start()

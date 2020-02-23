@@ -6,10 +6,12 @@ public class PierceModifier : ModifierBase
 {
     private Rigidbody rb;
     private Vector3 velocity;
+    private WeaponBase weapon;
 
     private void OnEnable()
     {
         m_projectile.TryGetComponent(out rb);
+        m_projectile.TryGetComponent(out weapon);
     }
 
     private void Update()
@@ -28,8 +30,17 @@ public class PierceModifier : ModifierBase
             Physics.IgnoreCollision(collision.GetContact(0).thisCollider, collision.collider);
             rb.velocity = velocity;
         }
-        m_projectile.Destruct();
-
+        if (weapon.weaponType == WeaponBase.EWeapon.ROLL)
+        {
+            if (rb.velocity.magnitude == 0.02f)
+            {
+                m_projectile.Destruct();
+            }
+        }
+        else
+        {
+            m_projectile.Destruct();
+        }
     }
 
 }
