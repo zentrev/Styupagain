@@ -15,7 +15,7 @@ public abstract class ProjectileBase : MonoBehaviourPun
     }
 
     public EProjectileType projectileType;
-    WeaponBase owner;
+    public WeaponBase owner;
     ModifierBase modifier;
 
     public Rigidbody rb;

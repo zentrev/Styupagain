@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileType: 2
+  owner: {fileID: 0}
   rb: {fileID: 1228228760078846277}
   Damage: 50
   BloodHitPrefab: {fileID: 0}
@@ -64,7 +65,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1228228760172633409
 GameObject:
   m_ObjectHideFlags: 0

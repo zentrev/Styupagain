@@ -10,10 +10,10 @@ public class RicochetModifier : ModifierBase
     private Rigidbody rb;
     private WeaponBase weapon;
 
-    private void OnEnable()
+    private void Start()
     {
         m_projectile.TryGetComponent(out rb);
-        m_projectile.TryGetComponent(out weapon);
+        weapon = m_projectile.owner;
 
     }
 
