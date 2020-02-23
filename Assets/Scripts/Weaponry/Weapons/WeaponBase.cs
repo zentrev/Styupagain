@@ -18,10 +18,28 @@ public class WeaponBase : MonoBehaviour
     public float fireVelocity = 0f;
     public Transform muzzle = null;
     public ProjectileBase projectile = null;
+    public WeaponManager  weaponManager = null;
 
     public void FireWeapon()
     {
         ProjectileBase projectileInstance = PhotonNetwork.Instantiate(projectile.name, muzzle.transform.position, muzzle.transform.rotation).GetComponent<ProjectileBase>();
+
+        switch (weaponManager.modifierSelected)
+        {
+            case ModifierBase.EModifier.CLUSTER:
+                projectileInstance.gameObject.AddComponent<ClusterModifier>().m_projectile = projectileInstance;
+                break;
+            case ModifierBase.EModifier.RICOCHET:
+                projectileInstance.gameObject.AddComponent<RicochetModifier>().m_projectile = projectileInstance;
+                break;
+            case ModifierBase.EModifier.THREEWAY:
+                projectileInstance.gameObject.AddComponent<ThreeWayModifier>().m_projectile = projectileInstance;
+                break;
+            case ModifierBase.EModifier.PIERCE:
+                projectileInstance.gameObject.AddComponent<PierceModifier>().m_projectile = projectileInstance;
+                break;
+        }
+
         ModifierBase mod = projectileInstance.gameObject.AddComponent<RicochetModifier>();
         mod.weapon = this;
         mod.m_projectile = projectileInstance;

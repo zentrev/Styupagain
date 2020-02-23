@@ -144,6 +144,7 @@ MonoBehaviour:
   fireVelocity: 10
   muzzle: {fileID: 2588301450299491539}
   projectile: {fileID: 0}
+  weaponManager: {fileID: 0}
 --- !u!114 &3893681740524197420
 MonoBehaviour:
   m_ObjectHideFlags: 0

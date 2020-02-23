@@ -23,43 +23,30 @@ public class WeaponManager : MonoBehaviour
     public void SetUpSelections()
     {
         WeaponBase wb = PhotonNetwork.Instantiate(WeaponBase.name, weaponSpawnPosition.position, weaponSpawnPosition.rotation).GetComponent<WeaponBase>();
+        wb.weaponManager = this;
         wb.transform.parent = weaponSpawnPosition;
         wb.weaponType = weaponSelected;
         GetComponent<FirstPersonPlayer>().m_weapon = wb;
         wb.projectile = BulletProjectile;
         Debug.Log(wb.projectile);
 
-        ProjectileBase b = null;
         switch (projectileSelected)
         {
             case ProjectileBase.EProjectileType.BULLET:
-                
-                b = Instantiate(BulletProjectile).GetComponent<ProjectileBase>();
+                wb.projectile = BulletProjectile;
+               
                 break;
             case ProjectileBase.EProjectileType.GRENADE:
-                b = Instantiate(GrenadeProjectile).GetComponent<ProjectileBase>();
+                wb.projectile = GrenadeProjectile;
+               
                 break;
             case ProjectileBase.EProjectileType.MISSILE:
-                b = Instantiate(MissileProjectile).GetComponent<ProjectileBase>();
+                wb.projectile = MissileProjectile;
+                
                 break;
             case ProjectileBase.EProjectileType.MOLOTOV:
-                b = Instantiate(MolotovProjectile).GetComponent<ProjectileBase>();
-                break;
-        }
-
-        switch (modifierSelected)
-        {
-            case ModifierBase.EModifier.CLUSTER:
-                b.gameObject.AddComponent<ClusterModifier>().m_projectile = b;
-                break;
-            case ModifierBase.EModifier.RICOCHET:
-                b.gameObject.AddComponent<RicochetModifier>().m_projectile = b;
-                break;
-            case ModifierBase.EModifier.THREEWAY:
-                b.gameObject.AddComponent<ThreeWayModifier>().m_projectile = b;
-                break;
-            case ModifierBase.EModifier.PIERCE:
-                b.gameObject.AddComponent<PierceModifier>().m_projectile = b;
+                wb.projectile = MolotovProjectile;
+         
                 break;
         }
     }
