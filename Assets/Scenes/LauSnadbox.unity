@@ -1287,7 +1287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPersistant: 0
-  m_runningGame: 0
+  m_runningGame: 1
   m_playTime: 3
   m_fireTime: 3
   players: []
