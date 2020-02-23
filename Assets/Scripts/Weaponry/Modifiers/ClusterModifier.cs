@@ -9,16 +9,28 @@ public class ClusterModifier : ModifierBase
     [SerializeField] float m_explosionForce = -1000;
     public bool cluster = true;
     private Rigidbody rb;
+    private WeaponBase weapon;
 
     private void OnEnable()
     {
         m_projectile.Damage = m_projectile.Damage / m_clusterCount;
         m_projectile.TryGetComponent(out rb);
+        m_projectile.TryGetComponent(out weapon);
     }
 
     protected override void OnCollisionEnter(Collision collision)
     {
-        m_projectile.Destruct();
+        if(weapon.weaponType == WeaponBase.EWeapon.ROLL)
+        {
+            if(rb.velocity.magnitude == 0.02f)
+            {
+                m_projectile.Destruct();
+            }
+        }
+        else
+        {
+            m_projectile.Destruct();
+        }
 
     }
 
