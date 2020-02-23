@@ -4270,17 +4270,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d725a4080e8e80849aca1262c8c7e5c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponGroup: {fileID: 0}
-  projectileGroup: {fileID: 0}
-  modifierGroup: {fileID: 0}
   selectedWeapon:
   - {fileID: 2835301856515645683}
   - {fileID: 2835301856812565887}
   - {fileID: 2835301856845690966}
   - {fileID: 2835301856964234736}
   - {fileID: 2835301856025913256}
-  selectedProjectile: {fileID: 0}
-  selectedModifier: {fileID: 0}
+  selectedProjectile:
+  - {fileID: 2835301857582006565}
+  - {fileID: 2835301856414255531}
+  - {fileID: 2835301856373430952}
+  - {fileID: 2835301856754861078}
+  - {fileID: 2835301857590918285}
+  selectedModifier:
+  - {fileID: 2835301856537458096}
+  - {fileID: 2835301857689491354}
+  - {fileID: 2835301856245560030}
+  - {fileID: 2835301856306406140}
+  - {fileID: 2835301856109895534}
   weaponManager: {fileID: 0}
 --- !u!1 &2835301856692627128
 GameObject:

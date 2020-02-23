@@ -44,16 +44,16 @@ public class LoadoutSelection : MonoBehaviour
            case "Random":
                 weaponManager.projectileSelected = (ProjectileBase.EProjectileType)Random.Range(1, 5);
                 break;
-           case "Thrown":
+           case "Bullet":
                weaponManager.projectileSelected = ProjectileBase.EProjectileType.BULLET;
                 break;
-           case "Shoot":
+           case "Grenade":
                weaponManager.projectileSelected = ProjectileBase.EProjectileType.GRENADE;
                 break;
-           case "Launch":
+           case "Missile":
                weaponManager.projectileSelected = ProjectileBase.EProjectileType.MISSILE;
                 break;
-           case "Roll":
+           case "Molotov":
                weaponManager.projectileSelected = ProjectileBase.EProjectileType.MOLOTOV;
                 break;
        }
@@ -63,16 +63,16 @@ public class LoadoutSelection : MonoBehaviour
            case "Random":
                 weaponManager.modifierSelected = (ModifierBase.EModifier)Random.Range(1, 5);
                 break;
-           case "Thrown":
+           case "Cluster":
                 weaponManager.modifierSelected = ModifierBase.EModifier.CLUSTER;
                 break;
-           case "Shoot":
+           case "Ricochet":
                 weaponManager.modifierSelected = ModifierBase.EModifier.RICOCHET;
                 break;
-           case "Launch":
+           case "3-Way":
                 weaponManager.modifierSelected = ModifierBase.EModifier.THREEWAY;
                 break;
-           case "Roll":
+           case "Piercing":
                 weaponManager.modifierSelected = ModifierBase.EModifier.PIERCE;
                 break;
        }
