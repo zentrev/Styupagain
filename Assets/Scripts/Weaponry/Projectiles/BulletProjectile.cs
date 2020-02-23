@@ -18,12 +18,9 @@ public class BulletProjectile : ProjectileBase
         List<Health> hpObjs = Physics.OverlapSphere(transform.position, 1.0f).Where(h => h.GetComponent<Health>()).Select(h => h.GetComponent<Health>()).ToList();
         foreach (Health c in hpObjs)
         {
-            if (c.tag == "Player")
-            {
-                c.DealDamage(Damage); //* modifier
-                Instantiate(BloodHitPrefab, transform.position, transform.rotation, null);
-            }
+            c.DealDamage(Damage ); //* modifier
         }
+        Instantiate(BloodHitPrefab, transform.position, transform.rotation, null);
         Destroy(gameObject);
     }
 }
