@@ -77,6 +77,7 @@ public class LoadoutSelection : MonoBehaviour
                 break;
        }
         Debug.Log(weaponManager.weaponSelected.ToString() + " " + weaponManager.projectileSelected.ToString() + " " + weaponManager.modifierSelected.ToString());
+        weaponManager.UpdateWeapon();
     }
 
 

@@ -52,5 +52,6 @@ public class WeaponBase : MonoBehaviour
                 projectileInstance.Fire(fireVelocity, true);
                 break;
         }
+        Debug.Log("Firing");
     }
 }

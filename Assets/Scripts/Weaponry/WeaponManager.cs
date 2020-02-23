@@ -25,28 +25,28 @@ public class WeaponManager : MonoBehaviour
         WeaponBase wb = PhotonNetwork.Instantiate(WeaponBase.name, weaponSpawnPosition.position, weaponSpawnPosition.rotation).GetComponent<WeaponBase>();
         wb.weaponManager = this;
         wb.transform.parent = weaponSpawnPosition;
-        wb.weaponType = weaponSelected;
+        
         GetComponent<FirstPersonPlayer>().m_weapon = wb;
-        wb.projectile = BulletProjectile;
-        Debug.Log(wb.projectile);
+    }
+
+    public void UpdateWeapon()
+    {
+
+        GetComponent<FirstPersonPlayer>().m_weapon.weaponType = weaponSelected;
 
         switch (projectileSelected)
         {
             case ProjectileBase.EProjectileType.BULLET:
-                wb.projectile = BulletProjectile;
-               
+                GetComponent<FirstPersonPlayer>().m_weapon.projectile = BulletProjectile;
                 break;
             case ProjectileBase.EProjectileType.GRENADE:
-                wb.projectile = GrenadeProjectile;
-               
+                GetComponent<FirstPersonPlayer>().m_weapon.projectile = GrenadeProjectile;
                 break;
             case ProjectileBase.EProjectileType.MISSILE:
-                wb.projectile = MissileProjectile;
-                
+                GetComponent<FirstPersonPlayer>().m_weapon.projectile = MissileProjectile;
                 break;
             case ProjectileBase.EProjectileType.MOLOTOV:
-                wb.projectile = MolotovProjectile;
-         
+                GetComponent<FirstPersonPlayer>().m_weapon.projectile = MolotovProjectile;
                 break;
         }
     }
