@@ -22,6 +22,9 @@ public class WeaponBase : MonoBehaviour
     public void FireWeapon()
     {
         ProjectileBase projectileInstance = PhotonNetwork.Instantiate(projectile.name, muzzle.transform.position, muzzle.transform.rotation).GetComponent<ProjectileBase>();
+        ModifierBase mod = projectileInstance.gameObject.AddComponent<RicochetModifier>();
+        mod.weapon = this;
+        mod.m_projectile = projectileInstance;
         switch (weaponType)
         {
             case EWeapon.SHOOT:

@@ -35,7 +35,7 @@ namespace StayupolKnights
 
 		[Header("Componets")]
 		[SerializeField] SkinnedMeshRenderer m_characterModel = null;
-		[SerializeField] WeaponBase m_weapon = null;
+		[SerializeField] public WeaponBase m_weapon = null;
 
 		#region Input Variables
 		Vector3 moveInput;

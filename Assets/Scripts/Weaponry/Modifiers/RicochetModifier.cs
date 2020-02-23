@@ -8,7 +8,6 @@ public class RicochetModifier : ModifierBase
     private Vector3 lastFrameVelocity;
     [SerializeField] Vector3 minVelocity;
     private Rigidbody rb;
-    private WeaponBase weapon;
 
     private void Start()
     {

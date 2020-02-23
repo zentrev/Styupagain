@@ -44,14 +44,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponBase: {fileID: 5907687351058210802, guid: e03fbaad23286fa4db9b546fa6031fae,
     type: 3}
-  BulletProjectile: {fileID: 7186874942894978590, guid: 7c3e81c6ee0d79b478e09d7c027b01f7,
+  BulletProjectile: {fileID: 1661521258477446641, guid: 7c3e81c6ee0d79b478e09d7c027b01f7,
     type: 3}
-  MolotovProjectile: {fileID: 8889884977925579343, guid: dcfa9c716d5c0504f85bffab31a39687,
-    type: 3}
-  GrenadeProjectile: {fileID: 817886744657053665, guid: 2b216ef028aa3e3408cde7be4919de53,
-    type: 3}
-  MissileProjectile: {fileID: 1228228760078846276, guid: 315a609f83a62bc49977bd6f421aaa86,
-    type: 3}
+  MolotovProjectile: {fileID: 0}
+  GrenadeProjectile: {fileID: 0}
+  MissileProjectile: {fileID: 0}
   projectileSelected: 1
   weaponSelected: 1
   modifierSelected: 2

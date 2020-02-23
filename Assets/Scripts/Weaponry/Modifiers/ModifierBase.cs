@@ -6,6 +6,7 @@ public abstract class ModifierBase : MonoBehaviour
 {
     public ProjectileBase m_projectile;
     public float m_damageModifier;
+    public WeaponBase weapon;
 
     public enum EModifier
     {

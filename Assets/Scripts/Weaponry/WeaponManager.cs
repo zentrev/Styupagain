@@ -1,16 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Photon.Pun;
+using StayupolKnights;
 public class WeaponManager : MonoBehaviour
 {
     [Header("Weapon Prefabs")]
     [SerializeField] GameObject WeaponBase;
     [Header("Projectiled Prefabs")]
-    [SerializeField] GameObject BulletProjectile;
-    [SerializeField] GameObject MolotovProjectile;
-    [SerializeField] GameObject GrenadeProjectile;
-    [SerializeField] GameObject MissileProjectile;
+    [SerializeField] ProjectileBase BulletProjectile;
+    [SerializeField] ProjectileBase MolotovProjectile;
+    [SerializeField] ProjectileBase GrenadeProjectile;
+    [SerializeField] ProjectileBase MissileProjectile;
 
     [Header("Player's Selections")]
     public ProjectileBase.EProjectileType projectileSelected;
@@ -19,14 +20,20 @@ public class WeaponManager : MonoBehaviour
 
     public Transform weaponSpawnPosition;
 
-       public void SetUpSelections()
+    public void SetUpSelections()
     {
-         Instantiate(WeaponBase, weaponSpawnPosition).GetComponent<WeaponBase>().weaponType = weaponSelected;
+        WeaponBase wb = PhotonNetwork.Instantiate(WeaponBase.name, weaponSpawnPosition.position, weaponSpawnPosition.rotation).GetComponent<WeaponBase>();
+        wb.transform.parent = weaponSpawnPosition;
+        wb.weaponType = weaponSelected;
+        GetComponent<FirstPersonPlayer>().m_weapon = wb;
+        wb.projectile = BulletProjectile;
+        Debug.Log(wb.projectile);
 
         ProjectileBase b = null;
         switch (projectileSelected)
         {
             case ProjectileBase.EProjectileType.BULLET:
+                
                 b = Instantiate(BulletProjectile).GetComponent<ProjectileBase>();
                 break;
             case ProjectileBase.EProjectileType.GRENADE:
