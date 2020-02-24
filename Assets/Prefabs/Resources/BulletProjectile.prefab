@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4807023109642231140}
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.001, y: 0.00000009286828, z: -0.438}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 179.01443}
   m_Children: []
   m_Father: {fileID: 4997409360216670067}
@@ -107,7 +107,6 @@ GameObject:
   - component: {fileID: 1620474552576189265}
   - component: {fileID: 2183574495017340282}
   - component: {fileID: 1693015189718463453}
-  - component: {fileID: 1570254554574421992}
   m_Layer: 0
   m_Name: BulletProjectile
   m_TagString: Untagged
@@ -123,7 +122,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7186874942894978590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 403.5, y: 227, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4997409360216670067}
@@ -144,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileType: 1
   owner: {fileID: 0}
-  modifier: {fileID: 1570254554574421992}
+  modifier: {fileID: 0}
   rb: {fileID: 1620474552576189265}
   Damage: 50
   BloodHitPrefab: {fileID: 1083484083751507187, guid: d3e7245c5473ed94a8d912bcc74a44ed,
@@ -202,23 +201,6 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
---- !u!114 &1570254554574421992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7186874942894978590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40c525db8dbb2e644826f6c73919ad95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_projectile: {fileID: 1661521258477446641}
-  m_damageModifier: 0
-  weapon: {fileID: 0}
-  bounceCount: 2
-  minVelocity: {x: 0, y: 0, z: 0}
 --- !u!1 &8286909793503530336
 GameObject:
   m_ObjectHideFlags: 0

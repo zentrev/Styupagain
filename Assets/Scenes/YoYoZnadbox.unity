@@ -142,7 +142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!54 &513557622
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -359,6 +359,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2183574495017340282, guid: 7c3e81c6ee0d79b478e09d7c027b01f7,
+        type: 3}
+      propertyPath: viewIdField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6609140648013695888, guid: 7c3e81c6ee0d79b478e09d7c027b01f7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -418,6 +423,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BulletProjectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7186874942894978590, guid: 7c3e81c6ee0d79b478e09d7c027b01f7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c3e81c6ee0d79b478e09d7c027b01f7, type: 3}
@@ -536,7 +546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!136 &1767559565
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -858,7 +868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1978427677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1005,7 +1015,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!54 &2124085496
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1112,7 +1122,7 @@ MonoBehaviour:
   m_damageModifier: 0
   weapon: {fileID: 0}
   m_distanceApart: 3
-  horizontalShot: 0
+  horizontalShot: 1
 --- !u!114 &2124085502
 MonoBehaviour:
   m_ObjectHideFlags: 0

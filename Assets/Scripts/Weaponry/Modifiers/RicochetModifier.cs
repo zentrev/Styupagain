@@ -29,6 +29,7 @@ public class RicochetModifier : ModifierBase
             Ricochet(collision.contacts[0].normal);
             Debug.Log("bounce");
         }
+        Debug.Log(weapon);
         if (weapon.weaponType == WeaponBase.EWeapon.ROLL)
         {
             if (rb.velocity.magnitude == 0.02f)
