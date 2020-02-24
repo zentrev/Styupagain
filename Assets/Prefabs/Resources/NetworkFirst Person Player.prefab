@@ -37,29 +37,6 @@ MonoBehaviour:
   m_SynchronizePosition: 0
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
---- !u!114 &1632895194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2661534223671185248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 241aa2b91e0d9b24e81e87d1e2f91c07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeaponBase: {fileID: 5907687351058210802, guid: e03fbaad23286fa4db9b546fa6031fae,
-    type: 3}
-  BulletProjectile: {fileID: 1661521258477446641, guid: 7c3e81c6ee0d79b478e09d7c027b01f7,
-    type: 3}
-  MolotovProjectile: {fileID: 0}
-  GrenadeProjectile: {fileID: 0}
-  MissileProjectile: {fileID: 0}
-  projectileSelected: 1
-  weaponSelected: 1
-  modifierSelected: 2
-  weaponSpawnPosition: {fileID: 1843672856129022307}
 --- !u!114 &3378707750592786292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,8 +113,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4597772229693653634}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.528, z: 0.666}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.528, z: 0.6659999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2661534223394120314}
@@ -310,16 +287,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5169312918684941298, guid: a271d734d86f908429bcd2f8b8851f95,
-        type: 3}
-      propertyPath: m_characterModel
-      value: 
-      objectReference: {fileID: 6217859139603071134}
-    - target: {fileID: 5169312918684941298, guid: a271d734d86f908429bcd2f8b8851f95,
-        type: 3}
-      propertyPath: m_weapon
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5169312918684941299, guid: a271d734d86f908429bcd2f8b8851f95,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -390,6 +357,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7773109511658575271, guid: a271d734d86f908429bcd2f8b8851f95,
+        type: 3}
+      propertyPath: weaponSpawnPosition
+      value: 
+      objectReference: {fileID: 1843672856129022307}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a271d734d86f908429bcd2f8b8851f95, type: 3}
 --- !u!1 &2661534223671185248 stripped
@@ -407,12 +379,6 @@ GameObject:
 --- !u!4 &2661534223394120314 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5169312918944700132, guid: a271d734d86f908429bcd2f8b8851f95,
-    type: 3}
-  m_PrefabInstance: {fileID: 7156991598423372958}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &6217859139603071134 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 3826080570439365632, guid: a271d734d86f908429bcd2f8b8851f95,
     type: 3}
   m_PrefabInstance: {fileID: 7156991598423372958}
   m_PrefabAsset: {fileID: 0}

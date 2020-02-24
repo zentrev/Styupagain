@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5169312918684941308}
   - component: {fileID: 5169312918684941298}
   - component: {fileID: 5169312918684941309}
+  - component: {fileID: 7773109511658575271}
   m_Layer: 0
   m_Name: First Person Player
   m_TagString: Player
@@ -71,6 +72,8 @@ MonoBehaviour:
   jumpForce: 5
   airMovePercent: 0.35
   grounded: 0
+  m_characterModel: {fileID: 3826080570439365632}
+  m_weapon: {fileID: 0}
 --- !u!65 &5169312918684941309
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -84,6 +87,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7, y: 0.1, z: 0.7}
   m_Center: {x: 0, y: -1, z: 0}
+--- !u!114 &7773109511658575271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5169312918684941310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 241aa2b91e0d9b24e81e87d1e2f91c07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponBase: {fileID: 5907687351058210802, guid: e03fbaad23286fa4db9b546fa6031fae,
+    type: 3}
+  BulletProjectile: {fileID: 1661521258477446641, guid: 7c3e81c6ee0d79b478e09d7c027b01f7,
+    type: 3}
+  MolotovProjectile: {fileID: -9081442201664547063, guid: dcfa9c716d5c0504f85bffab31a39687,
+    type: 3}
+  GrenadeProjectile: {fileID: 8817988735154615831, guid: 2b216ef028aa3e3408cde7be4919de53,
+    type: 3}
+  MissileProjectile: {fileID: 3201256181182887673, guid: 315a609f83a62bc49977bd6f421aaa86,
+    type: 3}
+  projectileSelected: 1
+  weaponSelected: 1
+  modifierSelected: 2
+  weaponSpawnPosition: {fileID: 0}
 --- !u!1 &5169312918944700133
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,6 +323,12 @@ PrefabInstance:
 --- !u!4 &3815024372535220229 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6505476823580976043, guid: d701b2577ec310b46aded6130853e1f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 7978593758163762094}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &3826080570439365632 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6602647321940332462, guid: d701b2577ec310b46aded6130853e1f6,
     type: 3}
   m_PrefabInstance: {fileID: 7978593758163762094}
   m_PrefabAsset: {fileID: 0}

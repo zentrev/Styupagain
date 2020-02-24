@@ -10,8 +10,8 @@ public class PierceModifier : ModifierBase
 
     private void OnEnable()
     {
-        m_projectile.TryGetComponent(out rb);
-        m_projectile.TryGetComponent(out weapon);
+        TryGetComponent(out rb);
+        TryGetComponent(out weapon);
     }
 
     private void Update()
